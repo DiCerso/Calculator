@@ -36,7 +36,6 @@ public class calculatorController {
     public ResponseEntity<info> multiplicacion(@RequestBody Map<String, Object> dat){
         info request = new info("OK","Multiplicacion", (Integer) dat.get("num1"), (Integer) dat.get("num2"));
         return ResponseEntity.status(HttpStatus.OK).body(request);
-
     }
 
     @PostMapping("/division")
@@ -48,4 +47,11 @@ public class calculatorController {
             return ResponseEntity.status(HttpStatus.OK).body(request);
         }
     }
-}
+
+
+/*    public ResponseEntity<infoRes> division(@RequestBody infoReq){
+        infoRes operatcion = new suma(infoReq);
+        return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(operatcion);
+    }*/
+
+    }

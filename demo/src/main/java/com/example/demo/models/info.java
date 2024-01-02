@@ -8,7 +8,7 @@ public class info {
     public int numero1;
     public int numero2;
     public String operation;
-    public double information;
+    public Double information;
 
     public info(String status, String operation, Integer numero1, Integer numero2){
         this.status = status;
@@ -17,17 +17,17 @@ public class info {
         this.numero2 = numero2;
         switch (operation){
             case "Resta":
-                this.information = (numero1 - numero2);
+                this.information = Double.parseDouble((String.valueOf (numero1 - numero2)));
                 break;
             case "Suma":
-                this.information = (numero1 + numero2);
+                this.information = Double.parseDouble((String.valueOf (numero1 + numero2)));
                 break;
             case "Multiplicacion":
-                this.information = (numero1 * numero2);
+                this.information = Double.parseDouble((String.valueOf (numero1 * numero2)));
                 break;
             case "Division":
                 if(numero2 != 0){
-                    this.information = (double) numero1 / numero2;
+                    this.information = Double.parseDouble((String.valueOf (numero1 / numero2)));
                 }else{
                     this.status = "ERROR";
                 }
